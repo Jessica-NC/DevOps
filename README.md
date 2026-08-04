@@ -13,7 +13,12 @@ _(em construção)_
 
 ## Tecnologias utilizadas
 
-_(a definir)_
+- Python 3.12 + Flask (API REST)
+- Flask-SQLAlchemy (ORM)
+- PostgreSQL (banco de dados em produção/Docker)
+- SQLite (banco em memória para testes)
+- Docker e Docker Compose (containerização)
+- pytest (testes automatizados)
 
 ## Estrutura de pastas
 
@@ -25,7 +30,22 @@ _(a definir)_
 
 ## Como executar
 
-_(a definir)_
+### Com Docker (recomendado)
+
+```bash
+docker compose up --build
+```
+
+A API ficará disponível em `http://localhost:5000`.
+
+### Localmente, sem Docker
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-dev.txt
+python -m app.app
+```
 
 ## Licença
 
