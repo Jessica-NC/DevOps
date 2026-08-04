@@ -1,5 +1,7 @@
 # CodeFactory TaskManager
 
+![CI](https://github.com/Jessica-NC/DevOps/actions/workflows/ci.yml/badge.svg)
+
 > Projeto demonstrativo desenvolvido como parte da adoção da Cultura DevOps na
 > CodeFactory Solutions (Atividade Prática — DevOps e Integração Contínua, UNINTER).
 
