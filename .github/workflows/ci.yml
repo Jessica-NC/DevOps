@@ -1,0 +1,42 @@
+name: CI - CodeFactory TaskManager
+
+# Dispara a pipeline em pushes e Pull Requests direcionados às branches
+# principais do fluxo de trabalho (main e desenvolvimento).
+on:
+  push:
+    branches: [main, desenvolvimento]
+  pull_request:
+    branches: [main, desenvolvimento]
+
+jobs:
+  build-and-test:
+    name: Lint, testes e build da imagem Docker
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) Baixa o código do repositório para o runner
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # 2) Prepara o Python na versão usada no projeto
+      - name: Configurar Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      # 3) Instala as dependências de desenvolvimento (inclui pytest e flake8)
+      - name: Instalar dependências
+        run: pip install -r requirements-dev.txt
+
+      # 4) Verifica o padrão de código (falha a pipeline se houver erros de lint)
+      - name: Rodar lint (flake8)
+        run: flake8 app/ tests/ --max-line-length=100
+
+      # 5) Executa a suíte de testes automatizados
+      - name: Rodar testes (pytest)
+        run: pytest tests/ -v
+
+      # 6) Garante que a imagem Docker da aplicação realmente builda
+      - name: Build da imagem Docker
+        run: docker build -t codefactory-taskmanager:ci .
