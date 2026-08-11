@@ -50,3 +50,5 @@ python -m app.app
 ## LicenÃ§a
 
 _(a definir)_
+
+- Evidência: atualização da branch features/task-crud para Pull Request.
