@@ -53,3 +53,5 @@ _(a definir)_
 
 Este projeto estÃ¡ licenciado sob os termos da licenÃ§a MIT. Veja o arquivo
 [LICENSE](LICENSE) para mais detalhes.
+
+- Evidência: atualização da branch features/readme-docs para Pull Request.
