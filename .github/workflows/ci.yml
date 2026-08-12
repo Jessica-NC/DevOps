@@ -35,7 +35,9 @@ jobs:
 
       # 5) Executa a suíte de testes automatizados
       - name: Rodar testes (pytest)
-        run: pytest tests/ -v
+        env:
+          PYTHONPATH: .
+        run: python -m pytest tests/ -v
 
       # 6) Garante que a imagem Docker da aplicação realmente builda
       - name: Build da imagem Docker
