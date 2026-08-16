@@ -2,56 +2,56 @@
 
 ![CI](https://github.com/Jessica-NC/DevOps/actions/workflows/ci.yml/badge.svg)
 
-> Projeto demonstrativo desenvolvido como parte da adoÃ§Ã£o da Cultura DevOps na
-> CodeFactory Solutions (Atividade PrÃ¡tica â€” DevOps e IntegraÃ§Ã£o ContÃ­nua, UNINTER).
+> Projeto demonstrativo desenvolvido como parte da adoção da Cultura DevOps na
+> CodeFactory Solutions (Atividade Prática — DevOps e Integração Contínua, UNINTER).
 
-## DescriÃ§Ã£o do projeto
+## Descrição do projeto
 
-O **CodeFactory TaskManager** Ã© uma API REST simples de gerenciamento de
-tarefas, utilizada como projeto de referÃªncia para demonstrar, na prÃ¡tica,
-a adoÃ§Ã£o da Cultura DevOps pela equipe da CodeFactory Solutions:
-versionamento com Git/GitHub, containerizaÃ§Ã£o com Docker e um pipeline de
-IntegraÃ§Ã£o ContÃ­nua.
+O **CodeFactory TaskManager** é uma API REST simples de gerenciamento de
+tarefas, utilizada como projeto de referência para demonstrar, na prática,
+a adoção da Cultura DevOps pela equipe da CodeFactory Solutions:
+versionamento com Git/GitHub, containerização com Docker e um pipeline de
+Integração Contínua.
 
 ## Objetivo
 
-Demonstrar como prÃ¡ticas e ferramentas de DevOps (controle de versÃ£o
-colaborativo, containers e automaÃ§Ã£o de build/testes) podem resolver os
-problemas de padronizaÃ§Ã£o, integraÃ§Ã£o e agilidade enfrentados pela equipe
+Demonstrar como práticas e ferramentas de DevOps (controle de versão
+colaborativo, containers e automação de build/testes) podem resolver os
+problemas de padronização, integração e agilidade enfrentados pela equipe
 de desenvolvimento da CodeFactory Solutions.
 
 ## Tecnologias utilizadas
 
 - Python 3.12 + Flask (API REST)
 - Flask-SQLAlchemy (ORM)
-- PostgreSQL (banco de dados em produÃ§Ã£o/Docker)
-- SQLite (banco em memÃ³ria para testes)
-- Docker e Docker Compose (containerizaÃ§Ã£o)
+- PostgreSQL (banco de dados em produção/Docker)
+- SQLite (banco em memória para testes)
+- Docker e Docker Compose (containerização)
 - pytest (testes automatizados)
-- GitHub Actions (IntegraÃ§Ã£o ContÃ­nua)
+- GitHub Actions (Integração Contínua)
 
 ## Estrutura de pastas
 
 ```
 DevOps/
-â”œâ”€â”€ .github/workflows/   # Pipeline de IntegraÃ§Ã£o ContÃ­nua (GitHub Actions)
-â”œâ”€â”€ app/                 # CÃ³digo-fonte da API (Flask)
-â”œâ”€â”€ tests/                # Testes automatizados (pytest)
-â”œâ”€â”€ docs/                 # DocumentaÃ§Ã£o complementar
-â”œâ”€â”€ Dockerfile            # Imagem da aplicaÃ§Ã£o
-â”œâ”€â”€ docker-compose.yml    # OrquestraÃ§Ã£o dos containers (app + banco)
-â”œâ”€â”€ requirements.txt      # DependÃªncias de produÃ§Ã£o
-â”œâ”€â”€ requirements-dev.txt  # DependÃªncias de desenvolvimento/teste
-â”œâ”€â”€ README.md
-â”œâ”€â”€ CONTRIBUTING.md
-â””â”€â”€ LICENSE
+├── .github/workflows/   # Pipeline de Integração Contínua (GitHub Actions)
+├── app/                 # Código-fonte da API (Flask)
+├── tests/                # Testes automatizados (pytest)
+├── docs/                 # Documentação complementar
+├── Dockerfile            # Imagem da aplicação
+├── docker-compose.yml    # Orquestração dos containers (app + banco)
+├── requirements.txt      # Dependências de produção
+├── requirements-dev.txt  # Dependências de desenvolvimento/teste
+├── README.md
+├── CONTRIBUTING.md
+└── LICENSE
 ```
 
 ## Como instalar
 
-1. Clone o repositÃ³rio: `git clone https://github.com/Jessica-NC/DevOps.git`
+1. Clone o repositório: `git clone https://github.com/Jessica-NC/DevOps.git`
 2. Entre na pasta do projeto: `cd DevOps`
-3. Siga as instruÃ§Ãµes da seÃ§Ã£o "Como executar" abaixo.
+3. Siga as instruções da seção "Como executar" abaixo.
 
 ## Como executar
 
@@ -61,7 +61,7 @@ DevOps/
 docker compose up --build
 ```
 
-A API ficarÃ¡ disponÃ­vel em `http://localhost:5000`.
+A API ficará disponível em `http://localhost:5000`.
 
 ### Localmente, sem Docker
 
@@ -72,12 +72,13 @@ pip install -r requirements-dev.txt
 python -m app.app
 ```
 
-## LicenÃ§a
+## Evidências de colaboração
 
-- EvidÃªncia: atualizaÃ§Ã£o da branch features/task-crud para Pull Request.
+- Branch `features/task-crud` integrada via Pull Request #5.
+- Branch `features/readme-docs` integrada via Pull Request #6.
+- Branch `features/ci-pipeline` integrada via Pull Request #7.
 
-Este projeto estÃ¡ licenciado sob os termos da licenÃ§a MIT. Veja o arquivo
+## Licença
+
+Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo
 [LICENSE](LICENSE) para mais detalhes.
-
-- Evidência: atualização da branch features/ci-pipeline para Pull Request.
-- Evidência: atualização da branch features/readme-docs para Pull Request.
