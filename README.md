@@ -72,6 +72,12 @@ pip install -r requirements-dev.txt
 python -m app.app
 ```
 
+## Evidências de colaboração
+
+- Branch `features/task-crud` integrada via Pull Request #5.
+- Branch `features/readme-docs` integrada via Pull Request #6.
+- Branch `features/ci-pipeline` integrada via Pull Request #7.
+
 ## Licença
 
 Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo

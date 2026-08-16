@@ -37,7 +37,7 @@ jobs:
       - name: Rodar testes (pytest)
         env:
           PYTHONPATH: .
-        run: pytest tests/ -v
+        run: python -m pytest tests/ -v
 
       # 6) Garante que a imagem Docker da aplicação realmente builda
       - name: Build da imagem Docker
